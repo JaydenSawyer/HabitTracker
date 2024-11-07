@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HabitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HabitTracker" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,11 +25,11 @@
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="filled" title="Add Your own Habit"/>
                                     <connections>
-                                        <segue destination="cgo-T3-Ktn" kind="show" id="TDp-h9-ecw"/>
+                                        <segue destination="cgo-T3-Ktn" kind="show" id="ADe-sM-Q2C"/>
                                     </connections>
                                 </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" textLabel="8hU-Vf-tCQ" detailTextLabel="oTH-dy-jek" style="IBUITableViewCellStyleSubtitle" id="K41-5u-VMB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HabitCell" textLabel="8hU-Vf-tCQ" detailTextLabel="oTH-dy-jek" style="IBUITableViewCellStyleSubtitle" id="K41-5u-VMB">
                                         <rect key="frame" x="0.0" y="94" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K41-5u-VMB" id="H45-Co-f00">
@@ -76,7 +76,7 @@
         <!--View Controller2-->
         <scene sceneID="fkT-29-7gN">
             <objects>
-                <viewController id="cgo-T3-Ktn" customClass="ViewController2" customModule="HabitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cgo-T3-Ktn" customClass="ViewController2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OmU-Ea-SL9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add"/>
                                 <connections>
-                                    <action selector="addButton:" destination="cgo-T3-Ktn" eventType="touchUpInside" id="yh8-zs-yLO"/>
+                                    <action selector="addButtonTapped:" destination="cgo-T3-Ktn" eventType="touchUpInside" id="SXP-7c-xKm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,9 +108,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8Vf-Em-Rgz"/>
                     <connections>
-                        <outlet property="DescriptionTextField" destination="tGO-y1-QxK" id="brq-Jq-5EE"/>
-                        <outlet property="NameTextField" destination="4Q0-gV-KaQ" id="j2Y-W1-TnQ"/>
-                        <outlet property="descriptionTextField" destination="tGO-y1-QxK" id="ibD-V0-oA7"/>
+                        <outlet property="descriptionTextField" destination="tGO-y1-QxK" id="QN3-vc-e2o"/>
                         <outlet property="nameTextField" destination="4Q0-gV-KaQ" id="Xvi-J7-wfT"/>
                     </connections>
                 </viewController>

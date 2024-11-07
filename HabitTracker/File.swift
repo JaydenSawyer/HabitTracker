@@ -7,17 +7,14 @@
 
 import Foundation
 
-class Habit{
-    var Name: String
+class Habit {
+    var name: String
     var description: String
-    var Completed: Int
-    var Goal: Int
     
-    init(Name: String, description: String, Completed: Int, Goal: Int) {
-        self.Name = Name
+    init(name: String, description: String) {
+        self.name = name
         self.description = description
-        self.Completed = Completed
-        self.Goal = Goal
     }
 }
+
 
