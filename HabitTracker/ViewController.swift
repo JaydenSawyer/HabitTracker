@@ -20,13 +20,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let sleep = Habit(name: "sleep", description: "sleep for 8 hours today")
+        
+        let exercise = Habit(name: "Exercise", description: "Go for a 30 minute run")
 
         
         let meditation = Habit(name: "Meditation", description: "Do 10 minutes of meditation")
         habits.append(meditation)
+        habits.append(exercise)
+        habits.append(sleep)
     }
 
-    // Table view methods
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return habits.count
     }
@@ -39,6 +45,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    @IBAction func saveButton(_ sender: UIButton) {
+        
+    }
+    @IBAction func resetButton(_ sender: UIButton) {
+        
+    }
+    
     
     func addHabit(name: String, description: String) {
         let newHabit = Habit(name: name, description: description)
@@ -47,7 +60,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? ViewController2 {
+        if let destinationVC = segue.destination as? ViewController3 {
             destinationVC.delegate = self
         }
     }
