@@ -11,13 +11,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
     var habits: [Habit] = []
+    
+    let defaults = UserDefaults.standard
 
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        if let hab = defaults.array(forKey: "myHabits"){
+            habits = hab as! [Habit]
+        }
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -46,10 +49,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
-        
+        defaults.set(habits, forKey: "myHabits")
     }
     @IBAction func resetButton(_ sender: UIButton) {
-        
+        defaults.removeObject(forKey: "myHabits")
     }
     
     
