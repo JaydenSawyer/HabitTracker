@@ -7,6 +7,18 @@
 
 import UIKit
 
+
+class Habit : Codable{
+    var name: String
+    var description: String
+    
+    init(name: String, description: String) {
+        self.name = name
+        self.description = description
+    }
+    
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
@@ -15,6 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let defaults = UserDefaults.standard
 
     @IBOutlet weak var tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +36,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         tableView.delegate = self
         tableView.dataSource = self
+        
+       
         
         let sleep = Habit(name: "sleep", description: "sleep for 8 hours today")
         
@@ -33,6 +48,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         habits.append(meditation)
         habits.append(exercise)
         habits.append(sleep)
+        
+      
     }
 
     
